@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <import type="android.view.View" />
+        <import type="android.widget.TextView" />
+        <import type="java.util.List" />
+        <variable
+            name="viewmodel"
+            type="com.example.mypractical.ui.main.MovieViewModel" />
+        <variable
+            name="listner"
+            type="com.example.mypractical.ui.main.MainActivity" />
+        <variable
+            name="alMain"
+            type="List&lt;com.example.mypractical.data.model.TopicModel.Data.Topic>" />
+    </data>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ui.main.MainActivity">
+
+        <SearchView
+            android:id="@+id/edtSearchMovies"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvMovies"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingLeft="@dimen/_5sdp"
+            android:paddingRight="@dimen/_5sdp"
+            tools:listitem="@layout/movies_adpater"
+            android:layout_marginTop="@dimen/_10sdp"
+            />
+
+    </LinearLayout>
+
+</layout>

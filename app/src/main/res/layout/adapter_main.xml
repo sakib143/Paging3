@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:tool="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <import type="android.view.View" />
+        <variable
+            name="mainModel"
+            type="com.example.mypractical.data.model.TopicModel.Data.Topic" />
+        <variable
+            name="listner"
+            type="com.example.mypractical.listner.MainListner" />
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="@{()-> listner.oepnDetails(mainModel)}" >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="@dimen/_10sdp"
+            tools:text="Topic name"
+            android:text="@{mainModel.topicname}"
+            android:textSize="@dimen/_18ssp"/>
+
+    </RelativeLayout>
+</layout>
